@@ -44,7 +44,7 @@ class Settings(BaseSettings):
 
     BACKEND_CORS_ORIGINS: Annotated[
         list[AnyUrl] | str, BeforeValidator(parse_cors)
-    ] = []
+    ] = ["localhost"]
 
     PROJECT_NAME: str
     SENTRY_DSN: HttpUrl | None = None
